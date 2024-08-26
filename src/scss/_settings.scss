@@ -18,6 +18,11 @@
   font-size: 16px;
 }
 
+h1, h2, h3 h4 h5 h6 {
+  margin: 0;
+  padding: 0;
+}
+
 img {
   height: auto;
   max-width: 100%;
@@ -97,4 +102,31 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.header-1 {
+  text-transform: uppercase;
+}
+
+.subtitle-1 {
+  text-transform: none;
+}
+
+.btn {
+  padding: 33px 64px;
+  font-size: 1.125rem;
+  color: var(--light-color);
+  background-color: var(--black-color);
+  border-radius: 60px;
+  text-transform: uppercase;
+  transition: all 0.25s ease-in;
+
+  &:hover {
+    background-color: var(--light-color);
+    color: var(--black-color);
+  }
+
+  &:active {
+    background-color: #e8e8e8;
+  }
 }
