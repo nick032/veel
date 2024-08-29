@@ -1,0 +1,122 @@
+.about {
+  position: relative;
+  bottom: 120px;
+  padding-bottom: 31px;
+  background-image: url("../img/bg_about.png");
+  background-size: 790px 100%;
+  background-repeat: no-repeat;
+
+  &__title {
+    margin-bottom: 136px;
+    font-size: 4.375rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: right;
+    line-height: 5.25rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__unit {
+    position: relative;
+    margin-bottom: 31px;
+    width: 790px;
+    overflow: hidden;
+    padding-left: 79px;
+    padding-top: 79px;
+    padding-bottom: 79px;
+  }
+
+}
+
+.expert {
+  position: absolute;
+  top: 99px;
+  right: 109px;
+  z-index: 10;
+  &__avatar {
+    margin-bottom: 25px;
+    width: 184px;
+    height: 184px;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  &__name {
+    margin-bottom: 2px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--light-color);
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 1.06rem;
+    font-weight: 400;
+    color: var(--gray-color);
+    text-align: center;
+    line-height: 1.25rem;
+  }
+}
+
+.unit {
+  position: relative;
+  background-color: var(--black-color);
+
+  &::before {
+    content: "Сервис";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 250px;
+    font-weight: 400;
+    color: rgba($color: #ffffff, $alpha: 0.03);
+    line-height: 200px;
+
+  }
+
+  &__title {
+    margin-bottom: 91px;
+    font-size: 1.875rem;
+    font-weight: 400;
+    color: var(--light-color);
+    line-height: 2.25rem;
+  }
+
+  &__text {
+    max-width: 495px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--light-color);
+    line-height: 1.375rem;
+  }
+}
+
+.control {
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 25px;
+  }
+
+  &__item {
+    margin-right: 39px;
+    width: 19px;
+    height: 19px;
+    background-color: #e8e8e8;
+    border-radius: 100%;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--black-color);
+    }
+  }
+}

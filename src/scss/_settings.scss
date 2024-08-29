@@ -26,7 +26,7 @@ h1, h2, h3 h4 h5 h6 {
 img {
   height: auto;
   max-width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 a {
@@ -113,12 +113,14 @@ a {
 }
 
 .btn {
-  padding: 33px 64px;
+  min-width: 380px;
+  padding: 31px 64px;
   font-size: 1.125rem;
   color: var(--light-color);
   background-color: var(--black-color);
   border-radius: 60px;
   text-transform: uppercase;
+  line-height: 1.125rem;
   transition: all 0.25s ease-in;
 
   &:hover {
@@ -129,4 +131,12 @@ a {
   &:active {
     background-color: #e8e8e8;
   }
+}
+
+.first-letter {
+  font-size: 107px;
+  font-family: "Roundhand", sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 20px;
 }
