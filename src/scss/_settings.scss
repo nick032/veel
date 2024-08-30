@@ -131,6 +131,12 @@ a {
   &:active {
     background-color: #e8e8e8;
   }
+
+  &--white {
+    width: 300px;
+    background-color: var(--light-color);
+    color: var(--black-color);
+  }
 }
 
 .first-letter {
