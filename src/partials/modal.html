@@ -1,17 +1,34 @@
-<div class="modal">
-  <div class="modal__left">
-    <div class="modal__content">
-      <h2 class="modal__title">Узнать больше о&nbsp;новых&nbsp;ЖК</h2>
-      <p class="modal__text">Что бы получить более подробную информацию ввердите ваши данные</p>
-      <form action="" class="modal__form form">
-        <input type="text" class="form__input" name="phone" placeholder="+7 (959) 959-95-95">
-        <input type="text" class="form__input" name="name" placeholder="Ваше имя">
-      </form>
-      <button class="btn btn-reset btn--white">получить консультация</button>
-      <div class="modal__text-mini">Менеджер с Вами свяжется через 15 минут</div>
+<div class="modal hystmodal" id="modal-form" aria-hidden="true">
+  <div class="hystmodal__wrap">
+    <div class="hystmodal__window" role="dialog" aria-modal="true">
+      <button data-hystclose class="hystmodal__close" data-hystmodal="#modal-success">Закрыть</button>
+      <div class="modal__left">
+        <div class="modal__content">
+          <h2 class="modal__title">Узнать больше о&nbsp;новых&nbsp;ЖК</h2>
+          <p class="modal__text">Что бы получить более подробную информацию ввердите ваши данные</p>
+          <form action="" class="modal__form form">
+            <input type="text" class="form__input" name="phone" placeholder="+7 (959) 959-95-95">
+            <input type="text" class="form__input" name="name" placeholder="Ваше имя">
+          </form>
+          <button class="btn btn-reset btn--white form__btn" data-hystmodal1="#modal-success">получить консультация</button>
+          <div class="modal__text-mini">Менеджер с Вами свяжется через 15 минут</div>
+        </div>
+      </div>
+      <div class="modal__right">
+        <img class="modal__img" src="./img/modal-img.jpg" alt="Жилой комплекс премуим класса">
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<div class="modal-success hystmodal" id="modal-success" aria-hidden="true">
+  <div class="hystmodal__wrap">
+    <div class="modal-success__container hystmodal__window" role="dialog" aria-modal="true">
+      <button data-hystclose class="hystmodal__close">Закрыть</button>
+      <div class="modal-success__icon"><img src="./img/svg/modal-success-icon.svg" alt=""></div>
+      <div class="modal-success__text">Благодарим за&nbsp;обращение!</div>
     </div>
   </div>
-  <div class="modal__right">
-    <img src="./img/modal-img.jpg" alt="Жилой комплекс премуим класса">
-  </div>
+
 </div>
