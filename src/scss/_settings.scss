@@ -157,3 +157,9 @@ a {
     max-width: 800px;
   }
 }
+
+@media (max-width: 360px) {
+  .container {
+    max-width: 360px;
+  }
+}

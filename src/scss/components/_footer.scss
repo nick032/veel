@@ -62,7 +62,7 @@
     font-size: 16px;
     font-weight: 400;
     color: var(--light-color);
-    line-height: 1.5;
+    line-height: 16px;
     transition: all 0.3s ease-out;
 
     &:hover {
@@ -86,6 +86,25 @@
     transition: all 0.3s ease-out;
     &:hover {
       color: var(--light-color);
+    }
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .footer {
+    &__contacts-wrap {
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    &__link {
+      display: block;
+      margin-bottom: 10px;
+    }
+    &__social {
+      width: 100%;
+      align-items: end;
     }
   }
 }

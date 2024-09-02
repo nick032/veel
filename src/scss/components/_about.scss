@@ -1,6 +1,8 @@
 .about {
   position: relative;
   margin-bottom: 120px;
+  background-image: url("../img/bg_about.png");
+    background-repeat: no-repeat;
 
   &__get-selection {
     padding: 53px 0px 53px 53px;
@@ -13,9 +15,7 @@
   &__wrapp {
     margin-bottom: 50px;
     padding-bottom: 31px;
-    background-image: url("../img/bg_about.png");
-    background-size: 790px 100%;
-    background-repeat: no-repeat;
+
   }
 
   &__title {
@@ -42,7 +42,6 @@
     padding-top: 79px;
     padding-bottom: 79px;
   }
-
 }
 
 .expert {
@@ -59,7 +58,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
   }
 
   &__name {
@@ -93,7 +91,6 @@
     font-weight: 400;
     color: rgba($color: #ffffff, $alpha: 0.03);
     line-height: 200px;
-
   }
 
   &__title {
@@ -131,6 +128,39 @@
 
     &:hover {
       background-color: var(--black-color);
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .about {
+    background-position: 0 115px;
+    margin-bottom: 60px;
+
+    &__title {
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    &__wrapp {
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      padding-top: 860px;
+      background-size: auto;
+    }
+    &__expert {
+      top: auto;
+      bottom: 528px;
+    }
+
+    &__slide-control {
+      display: flex;
+      margin: 0 auto;
+    }
+
+    &__unit {
+      width: 100%;
     }
   }
 }
