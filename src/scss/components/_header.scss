@@ -115,5 +115,33 @@
   .header {
     background-size: cover;
   }
+}
+
+@media (max-width: 1200px) {
+  .header {
+    background-image: url("../img/hero-bg-1200.jpg");
+    background-size: cover;
+
+    &__top {
+      margin-bottom: 52px;
+    }
+  }
+
+  .hero {
+    &__text {
+      display: none;
+    }
+
+    &__title {
+      max-width: 421px;
+      margin-bottom: 6px;
+    }
+  }
+
+  .nav {
+    &__item {
+      margin-right: 15px;
+    }
+  }
 
 }

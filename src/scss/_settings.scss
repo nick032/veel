@@ -136,6 +136,10 @@ a {
     width: 300px;
     background-color: var(--light-color);
     color: var(--black-color);
+    transition: all 0.3s ease-out;
+    &:hover {
+      background-color: var(--gray-color);
+    }
   }
 }
 
@@ -145,4 +149,11 @@ a {
   font-style: italic;
   font-weight: 500;
   letter-spacing: 20px;
+}
+
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 800px;
+  }
 }

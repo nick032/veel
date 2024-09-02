@@ -1,10 +1,22 @@
 .about {
   position: relative;
   margin-bottom: 120px;
-  padding-bottom: 31px;
-  background-image: url("../img/bg_about.png");
-  background-size: 790px 100%;
-  background-repeat: no-repeat;
+
+  &__get-selection {
+    padding: 53px 0px 53px 53px;
+    background-image: url("../img/get-selection-bg.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+  }
+
+  &__wrapp {
+    margin-bottom: 50px;
+    padding-bottom: 31px;
+    background-image: url("../img/bg_about.png");
+    background-size: 790px 100%;
+    background-repeat: no-repeat;
+  }
 
   &__title {
     margin-bottom: 136px;
@@ -38,6 +50,7 @@
   top: 99px;
   right: 109px;
   z-index: 10;
+
   &__avatar {
     margin-bottom: 25px;
     width: 184px;
@@ -115,6 +128,7 @@
     border-radius: 100%;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+
     &:hover {
       background-color: var(--black-color);
     }

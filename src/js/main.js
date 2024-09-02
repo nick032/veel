@@ -1,6 +1,6 @@
 import "./_components.js";
 import "./components/hystmodal.min.js"
-import "./components/jquery.fancybox-1.3.4.pack.js"
+import "./components/jquery.fancybox.min.js"
 
 //Карта
 ymaps.ready(init);
@@ -20,3 +20,10 @@ const modalForm = new HystModal({
 const modalSuccess = new HystModal({
   linkAttributeName: "data-hystmodal",
 })
+
+
+$('.button-modal').click(function(e){
+  e.preventDefault();
+  // $('#test').triger('click');
+  $.fancybox.open($('#test'));
+});
