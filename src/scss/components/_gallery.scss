@@ -117,3 +117,35 @@
     grid-row: 3/4;
   }
 }
+
+@media (max-width: 360px) {
+  .gallery {
+    position: relative;
+    padding-bottom: 90px;
+    &__wrapp {
+      display: block;
+    }
+
+    &__item {
+      margin-bottom: 20px;
+    }
+
+    .item-1 {
+      height: 435px;
+    }
+
+    .item-4 {
+      border-bottom-left-radius: 0;
+      height: 175px;
+    }
+
+    .item-6 {
+      border-bottom-left-radius: 60px;
+    }
+  }
+
+  .button-modal {
+    position: absolute;
+    bottom: 0;
+  }
+}

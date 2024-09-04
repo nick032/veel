@@ -164,3 +164,20 @@
     }
   }
 }
+
+@media (max-width: 360px) {
+  .about {
+    background-position: 0 100px;
+    background-size: contain;
+    &__title {
+      margin-bottom: 20px;
+      font-size: 50px;
+      line-height: 50px;
+      text-align: center;
+    }
+
+    &__wrapp {
+      padding-top: 200px;
+    }
+  }
+}

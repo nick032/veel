@@ -244,13 +244,48 @@
     }
   }
 
-
   .header-contacts {
     flex-direction: column;
     width: 189px;
 
     &__address {
       margin-left: 0;
+    }
+  }
+
+  .hero {
+    position: static;
+    &__content {
+      display: block;
+    }
+    &__title {
+      margin-bottom: 283px;
+      font-size: 50px;
+      line-height: 50px;
+      text-align: center;
+    }
+
+    &__subtitle {
+
+      font-size: 55px;
+      line-height: 55px;
+    }
+
+    &__text {
+      display: block;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    &__price {
+      left: 50%;
+      top: 41%;
+      transform: translateX(-50%);
+    }
+
+    &__btn {
+      position: absolute;
+      bottom: 10px;
     }
   }
 
