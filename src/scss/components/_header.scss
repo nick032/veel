@@ -36,6 +36,10 @@
       color: var(--gray-color);
     }
   }
+
+  &__hamburger-menu {
+    display: none;
+  }
 }
 
 .header-contacts {
@@ -150,4 +154,118 @@
     }
   }
 
+}
+
+@media (max-width: 360px) {
+  .header {
+    position: relative;
+    height: 1257px;
+    background-color: #b8d5f5;
+    background-image: url("../img/hero-bg-360.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+
+    &__top {
+      justify-content: start;
+    }
+    .nav {
+      &__list {
+        padding-top: 120px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 100%;
+        z-index: 20;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        background-color: var(--light-color);
+        transition: 0.3s;
+      }
+
+      &__item {
+        width: 100%;
+        border-bottom: 1px solid var(--gray-color);
+
+        &:first-child {
+          border-top: 1px solid var(--gray-color);
+        }
+      }
+
+      &__link {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        font-size: 26px;
+        line-height: 26px;
+      }
+
+      &__burger-menu {
+        position: fixed;
+        top: 40px;
+        right: 10px;
+        z-index: 30;
+        width: 30px;
+        height: 30px;
+        transition: 0.3s;
+
+        .burger::before,
+        .burger::after,
+        .burger {
+          position: absolute;
+          width: 30px;
+          height: 2px;
+          background-color: var(--black-color);
+          transition: 0.3s;
+        }
+
+        .burger {
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          &::before {
+            content: '';
+            top: 12px;
+          }
+          &::after {
+            content: '';
+            top: -12px;
+          }
+        }
+      }
+    }
+    .burger-menu__active .nav__list {
+      right: 0;
+      transition: 0.3s;
+    }
+  }
+
+
+  .header-contacts {
+    flex-direction: column;
+    width: 189px;
+
+    &__address {
+      margin-left: 0;
+    }
+  }
+
+}
+
+.burger-menu__active .nav__burger-menu .burger{
+  background-color: transparent;
+
+  &::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
 }

@@ -21,9 +21,38 @@ const modalSuccess = new HystModal({
   linkAttributeName: "data-hystmodal",
 })
 
+// burger menu
+function burgerMenu(selector) {
 
-$('.button-modal').click(function(e){
-  e.preventDefault();
-  // $('#test').triger('click');
-  $.fancybox.open($('#test'));
-});
+  let menu = $(selector);
+
+  let button = menu.find('.nav__burger-menu', '.burger');
+
+  let links = menu.find('.nav__link');
+  let menuList = $('.nav__list')
+
+  // let overlay = menu.find('.burger-menu_overlay');
+
+  button.on('click', (e) => {
+    e.preventDefault();
+    toggleMenu();
+  });
+
+  links.on('click', () => toggleMenu());
+  // overlay.on('click', () => toggleMenu());
+
+  function toggleMenu(){
+    menu.toggleClass('burger-menu__active');
+
+    if (menu.hasClass('burger-menu__active')) {
+      $('body').css('overlow', 'hidden');
+    } else {
+      $('body').css('overlow', 'visible');
+    }
+  }
+}
+
+burgerMenu('.nav');
+
+
+
