@@ -6,18 +6,18 @@ import "./components/jquery.fancybox.min.js";
 ymaps.ready(init);
 function init() {
   var myMap = new ymaps.Map("origin__map", {
-      center: [55.708511, 37.455382],
-      controls: [],
-      zoom: 14,
-    }),
+    center: [55.708511, 37.455382],
+    controls: [],
+    zoom: 14,
+  }),
     // Создаём макет содержимого.
     MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-      '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+      '<div class="map-markers" style="color: #000000; font-weight: bold;">$[properties.iconContent]</div>'
     ),
-    myPlacemark = new ymaps.Placemark(
-      myMap.getCenter(),
+    myPlacemarkMetro = new ymaps.Placemark(
+      [55.712486, 37.455477],
       {
-        hintContent: "Собственный значок метки",
+        hintContent: "",
       },
       {
         // Опции.
@@ -26,24 +26,86 @@ function init() {
         // Своё изображение иконки метки.
         iconImageHref: "./img/map-markers/metro.png",
         // Размеры метки.
-        // iconImageSize: [30, 42],
+        iconImageSize: [80, 93],
         // Смещение левого верхнего угла иконки относительно
         // её "ножки" (точки привязки).
-        iconImageOffset: [-5, -38],
-      }
-    );
+        // iconImageOffset: [-5, -38],
+      }),
 
-    myMap.geoObjects
-      .add(myPlacemark);
+    myPlacemarkPark = new ymaps.Placemark(
+      [55.713555, 37.440596],
+      {
+        hintContent: "",
+      },
+      {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: "default#image",
+        // Своё изображение иконки метки.
+        iconImageHref: "./img/map-markers/park.png",
+        // Размеры метки.
+        iconImageSize: [80, 93],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        // iconImageOffset: [-5, -38],
+      }),
+    myPlacemarkDepo = new ymaps.Placemark(
+      [55.704447, 37.463875],
+      {
+        hintContent: "",
+      },
+      {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: "default#image",
+        // Своё изображение иконки метки.
+        iconImageHref: "./img/map-markers/depo.png",
+        // Размеры метки.
+        iconImageSize: [80, 93],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        // iconImageOffset: [-5, -38],
+      });
+
+  myMap.geoObjects.add(myPlacemarkMetro)
+    .add(myPlacemarkPark)
+    .add(myPlacemarkDepo);
+
+  myPlacemarkMetro.events
+    .add('mouseenter', function (e) {
+      e.get('target').options.set('iconImageSize', [90, 100]);
+    })
+    .add('mouseleave', function (e) {
+      e.get('target').options.set('iconImageSize', [80, 93]);
+    });
+
+  myPlacemarkDepo.events
+    .add('mouseenter', function (e) {
+      e.get('target').options.set('iconImageSize', [90, 100]);
+    })
+    .add('mouseleave', function (e) {
+      e.get('target').options.set('iconImageSize', [80, 93]);
+    });
+  myPlacemarkPark.events
+    .add('mouseenter', function (e) {
+      e.get('target').options.set('iconImageSize', [90, 100]);
+    })
+    .add('mouseleave', function (e) {
+      e.get('target').options.set('iconImageSize', [80, 93]);
+    });
 }
 
 // Модальные окна
 const modalForm = new HystModal({
   linkAttributeName: "data-hystmodal",
+  closeOnOverlay: true,
+  backscroll: true,
 });
 
 const modalSuccess = new HystModal({
   linkAttributeName: "data-hystmodal",
+  closeOnOverlay: true,
+  backscroll: true,
 });
 
 // burger menu

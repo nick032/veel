@@ -108,3 +108,47 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .footer {
+    &__wrapp {
+      display: flex;
+      flex-direction: column;
+      gap: 35px
+    }
+
+    &__menu-list {
+      // margin-bottom: 35px;
+    }
+
+    &__menu-item {
+      margin-right: 0;
+      text-align: center;
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+
+    &__social {
+      flex-direction: row;
+      justify-content: center;
+      gap: 17px
+    }
+
+    &__social-link {
+      margin: 0;
+    }
+    &__contacts {
+      padding-left: 0;
+      text-align: center;
+    }
+    &__contacts-wrap {
+      text-align: center;
+    }
+
+    &__policy {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+}

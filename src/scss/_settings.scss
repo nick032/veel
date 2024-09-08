@@ -134,6 +134,8 @@ a {
 
   &--white {
     width: 300px;
+    padding-left: 62px;
+    padding-right: 62px;
     background-color: var(--light-color);
     color: var(--black-color);
     transition: all 0.3s ease-out;
@@ -158,13 +160,13 @@ a {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
   .container {
-    max-width: 360px;
+    max-width: 480px;
   }
 
   .btn {
-    max-width: 340px;
+    max-width: 100%;
     width: 100%;
     padding: 33px 44px;
   }
